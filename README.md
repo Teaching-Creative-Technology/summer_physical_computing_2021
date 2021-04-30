@@ -13,7 +13,8 @@ SoSe 2021 Physical Computing at HS Magdeburg
 * 16.04.2021 – VL / Intro + Organisatorisches 
 * 23.04.2021 – VL / Basics 1 
 * 30.04.2021 – VL / Basics 2 
-* 07.05.2021 – VL / Basics 3 14.05.2021 – Entfällt (Christi Himmelfahrt)  
+* 07.05.2021 – VL / Basics 3 
+* 14.05.2021 – Entfällt (Christi Himmelfahrt)  
 * 21.05.2021 – VL / Basics 4 
 * 28.05.2021 – VL / Basics 5 
 * 04.06.2021 – VL / Basics 6 
