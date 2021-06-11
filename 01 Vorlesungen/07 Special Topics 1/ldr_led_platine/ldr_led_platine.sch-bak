@@ -1,0 +1,147 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D1
+U 1 1 60C32137
+P 3900 2900
+F 0 "D1" H 3893 3116 50  0000 C CNN
+F 1 "LED" H 3893 3025 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3900 2900 50  0001 C CNN
+F 3 "~" H 3900 2900 50  0001 C CNN
+	1    3900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_PHOTO R3
+U 1 1 60C34421
+P 5950 2550
+F 0 "R3" H 6020 2596 50  0000 L CNN
+F 1 "LDR" H 6020 2505 50  0000 L CNN
+F 2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" V 6000 2300 50  0001 L CNN
+F 3 "~" H 5950 2500 50  0001 C CNN
+	1    5950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60C34F29
+P 4200 2900
+F 0 "R1" V 3993 2900 50  0000 C CNN
+F 1 "150 Ohm" V 4084 2900 50  0000 C CNN
+F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 4130 2900 50  0001 C CNN
+F 3 "~" H 4200 2900 50  0001 C CNN
+	1    4200 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60C47349
+P 5600 2850
+F 0 "R2" V 5393 2850 50  0000 C CNN
+F 1 "5.6k Ohm" V 5484 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" V 5530 2850 50  0001 C CNN
+F 3 "~" H 5600 2850 50  0001 C CNN
+	1    5600 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 2700 5950 2850
+Wire Wire Line
+	5950 2850 5750 2850
+$Comp
+L power:+5V #PWR0101
+U 1 1 60C4AA0B
+P 5950 2400
+F 0 "#PWR0101" H 5950 2250 50  0001 C CNN
+F 1 "+5V" H 5965 2573 50  0000 C CNN
+F 2 "" H 5950 2400 50  0001 C CNN
+F 3 "" H 5950 2400 50  0001 C CNN
+	1    5950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60C4AF3D
+P 5450 3000
+F 0 "#PWR0102" H 5450 2750 50  0001 C CNN
+F 1 "GND" H 5455 2827 50  0000 C CNN
+F 2 "" H 5450 3000 50  0001 C CNN
+F 3 "" H 5450 3000 50  0001 C CNN
+	1    5450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2850 5450 3000
+Text GLabel 6250 2850 2    50   Input ~ 0
+LDR_SIGNAL
+Wire Wire Line
+	6250 2850 5950 2850
+Connection ~ 5950 2850
+$Comp
+L power:GND #PWR0103
+U 1 1 60C50784
+P 3550 2900
+F 0 "#PWR0103" H 3550 2650 50  0001 C CNN
+F 1 "GND" H 3555 2727 50  0000 C CNN
+F 2 "" H 3550 2900 50  0001 C CNN
+F 3 "" H 3550 2900 50  0001 C CNN
+	1    3550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2900 3750 2900
+Text GLabel 4550 2900 2    50   Output ~ 0
+PWM_SIGNAL
+Wire Wire Line
+	4550 2900 4350 2900
+$Comp
+L Connector:Conn_01x04_Female J1
+U 1 1 60C518C9
+P 8200 2800
+F 0 "J1" H 8228 2776 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 8228 2685 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-4-5.08_1x04_P5.08mm_Horizontal" H 8200 2800 50  0001 C CNN
+F 3 "~" H 8200 2800 50  0001 C CNN
+	1    8200 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 60C53336
+P 8000 2700
+F 0 "#PWR0104" H 8000 2550 50  0001 C CNN
+F 1 "+5V" H 8015 2873 50  0000 C CNN
+F 2 "" H 8000 2700 50  0001 C CNN
+F 3 "" H 8000 2700 50  0001 C CNN
+	1    8000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60C53BCD
+P 8000 3000
+F 0 "#PWR0105" H 8000 2750 50  0001 C CNN
+F 1 "GND" H 8005 2827 50  0000 C CNN
+F 2 "" H 8000 3000 50  0001 C CNN
+F 3 "" H 8000 3000 50  0001 C CNN
+	1    8000 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 2800 0    50   Input ~ 0
+LDR_SIGNAL
+Text GLabel 8000 2900 0    50   Output ~ 0
+PWM_SIGNAL
+$EndSCHEMATC
